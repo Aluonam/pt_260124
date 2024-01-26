@@ -8,7 +8,7 @@ const TodoList = () => {
     const handleSaveTask = ()=>{
         const newTaskList = structuredClone(taskList);
         newTaskList.push(inputTask)
-        
+        setInputTask("")
     }
 
   return (
