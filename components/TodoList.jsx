@@ -12,10 +12,18 @@ const TodoList = () => {
         setTaskList(newTaskList);
     }
 
+    const showList = taskList.map((actualTask)=>{
+        return(
+            <ul>
+                <li>{actualTask}</li>
+            </ul>
+        )
+    })
+
   return (
     <div>
-
-        <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea'></input>
+        {showList}
+        <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea' ></input>
         <button onClick={()=>{handleSaveTask()}}>send</button>
 
     </div>
