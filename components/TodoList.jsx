@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const TodoList = () => {
+
+    const [inputTask, setInputTask] = useState("")
+
   return (
-    <div>TodoList</div>
+    <div>
+
+        <input onClick={()=>{}} placeholder='Introduce una tarea'></input>
+
+    </div>
   )
 }
 
