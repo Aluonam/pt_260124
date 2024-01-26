@@ -23,7 +23,7 @@ const TodoList = () => {
   return (
     <div>
         {showList}
-        <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea' ></input>
+        <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea' value={inputTask} ></input>
         <button onClick={()=>{handleSaveTask()}}>send</button>
 
     </div>
