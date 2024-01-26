@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 const TodoList = () => {
 
     const [inputTask, setInputTask] = useState("")
+    const [taskList, setTaskList] = useState([])
 
     const handleSaveTask = ()=>{
-        const newTaskList = structuredClone(inputTask);
-        console.log(newTaskList)
+        const newTaskList = structuredClone(taskList);
+        newTaskList.push(inputTask)
+        
     }
 
   return (
@@ -14,6 +16,7 @@ const TodoList = () => {
 
         <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea'></input>
         <button onClick={()=>{handleSaveTask()}}>send</button>
+{taskList}
 
     </div>
   )
