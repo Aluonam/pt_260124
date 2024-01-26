@@ -8,7 +8,7 @@ const TodoList = () => {
     <div>
 
         <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea'></input>
-        <button onClick={()=>{}}>send</button>
+        <button onClick={()=>{console.log(inputTask)}}>send</button>
 
     </div>
   )
