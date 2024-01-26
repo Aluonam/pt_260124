@@ -7,8 +7,9 @@ const TodoList = () => {
 
     const handleSaveTask = ()=>{
         const newTaskList = structuredClone(taskList);
-        newTaskList.push(inputTask)
-        setInputTask("")
+        newTaskList.push(inputTask);
+        setInputTask("");
+        setTaskList(newTaskList);
     }
 
   return (
@@ -16,7 +17,6 @@ const TodoList = () => {
 
         <input onChange={(e)=>{setInputTask(e.target.value)}} placeholder='Introduce una tarea'></input>
         <button onClick={()=>{handleSaveTask()}}>send</button>
-{taskList}
 
     </div>
   )
